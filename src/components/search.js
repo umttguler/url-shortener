@@ -74,7 +74,7 @@ const Search = () => {
       </StyledForm>
       {short && (
         <>
-          <h2>Short Link: </h2>
+          <h2>Short Linnn: </h2>
 
           <DisplayLink shortend={short} />
         </>
