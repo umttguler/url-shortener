@@ -53,28 +53,29 @@ const Search = () => {
       <StyledForm onSubmit={(e) => handleSubmit(e)} autoComplete='off'>
         {/* <Label htmlFor='input'>Long Link Here:</Label> */}
         <TextField
-          style={{ marginBottom: '20px' }}
+          style={{ marginBottom: '20px' , color:'secondary' }}
           label='Link'
           variant='outlined'
           value={link}
+          color='secondary'
           onChange={(e) => setLink(e.target.value)}
         />
-
+          
         {!loading && (
           <Button
             onClick={(e) => handleSubmit(e)}
             variant='contained'
-            color='primary'
+            color='secondary'
           >
             Submit
           </Button>
         )}
-
+           
         {loading && <LinearProgress />}
       </StyledForm>
       {short && (
         <>
-          <h2>Short Linnn: </h2>
+          <h2> Short Link: </h2>
 
           <DisplayLink shortend={short} />
         </>
